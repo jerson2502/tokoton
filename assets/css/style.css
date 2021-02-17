@@ -1,0 +1,235 @@
+*{
+			margin:0;
+			outline: none;
+			box-sizing: border-box;
+		}
+		body{
+			background-image: radial-gradient(circle, #252525, #1d1d1d, #161616, #0d0d0d, #000000);
+			font-family: 'Space Grotesk' sans-serif;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: serif;
+		}
+		.Wrapper{
+			display: flex;
+			height: 100vh;
+			overflow-y: hidden;
+		}
+
+		.text{
+			width: 50%;
+			height: 100vh;
+			padding: 15px 15px 15px 100px;
+			display: flex;
+			align-items: center;
+
+		}
+
+		.text h1{
+			font-size: 70px;
+			line-height: 84px;
+			font-weight: normal;
+			color:#ffdd59;
+			text-transform: uppercase;
+			text-shadow: 0 2px 2px white;
+			font-family: 'Balsamiq Sans', cursive;
+		}
+
+		.text p{
+			font-size:20px;
+			color: #fbf7db;
+			text-transform: uppercase;
+			margin-top: 15px;
+			letter-spacing: 4px;
+			font-family: 'Balsamiq Sans', cursive;
+		}
+		.back{
+			text-decoration: none;
+			color: white;
+			font-size: 20px
+			border-radius:50%;
+			box-shadow: 0 0 4px white;
+			padding: 10px;
+			position: relative;
+		}
+
+		.text .btn{
+			position: relative;
+			display: inline-block;
+			width: 250px;
+			height: 70px;
+			line-height: 70px;
+			text-align: center;
+			border: 1px solid  #ffdd59;
+			color:  #ffdd59;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 16px;
+			letter-spacing: 4px;
+			margin-top: 80px;
+			overflow: hidden;
+			transition: all ease 0.5s;
+			box-shadow: 0 0 2px white;
+		}
+
+		.text .btn:before{
+			content:'';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background-color:#ffdd59;
+			z-index: -1;
+			transition: all ease 0.5s;
+		}
+		.text .btn:hover{
+			font-weight: 700;
+			color:#000000;
+			text-shadow: 0 2px white;
+		}
+		.text .btn:hover:before{
+			left: 0;
+		}
+		.social{
+			bottom: 100px;
+			margin-top: 200px;
+			position: absolute;
+			bottom: 50px;
+		}
+		.social a{
+			position: relative;
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			color: #fbf7db;
+			margin-right: 10px;
+			border: 1px solid #53636d;
+			border-radius: 50%;
+			transition: all ease 0.5s;
+
+		}
+		.social a:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #ffd32a;
+			border-radius:50%;
+			z-index: -1;
+			transform: scale(0);
+			transition: all ease 0.5s;
+		}
+		.social a:hover{
+			color: white;
+		}
+		.social a:hover:before{
+			transform: scale(1);
+		}
+
+		.img{
+			width: 50%;
+			padding: 0 30px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.img img{
+			width: 100%;
+			margin: 15px;
+			box-shadow: 0 2px 4px #fad390;
+		}
+		.img .img-stripe{
+			width: calc(50% - 15px);
+
+		}
+		/*################### img animation #################*/
+		.img .stripe1{
+			animation: stripe-one 60s ease 0s infinite;
+		}
+		@keyframes stripe-one{
+			50%{
+				transform: translateY(-200%);
+			}
+		}
+		.img .stripe2{
+			transform: translateY(-200%);
+			animation: stripe-two 60s ease 0s infinite;
+		}
+		@keyframes stripe-two{
+			50%{
+				transform: translateY(0%);
+			}
+		}
+
+		.toggleBtn{
+			display: inline-block;
+			width: 100px;
+			height: 80px;
+			padding: 20px 30px;
+			background-color:#ffdd59;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			border-bottom-right-radius: 100px;
+			cursor: pointer;
+			color: #222;
+		}
+		.toggleBtn h5{
+			position: absolute;
+			font-size: 25px;
+		}
+		.toggleBtn h5.close-icon{
+			opacity: 0;
+		}
+
+		.menu{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 45%;
+			height: 100%;
+			border-radius: 0 0 100% 0;
+			background-color:#ffdd59;
+			z-index: 9;
+			transform: scale(0);
+			transform-origin: top left;
+			font-family: serif;
+		}
+		nav{
+			padding: 100px;
+			transition: all ease 0.5s;
+		}
+		nav ul{
+			padding-left: 0;
+		}
+		nav ul li{
+			list-style: none;
+			margin-bottom: 30px;
+		}
+		nav ul li a{
+			position: relative;
+			font-family: 'Balsamiq Sans', cursive;
+			font-size: 40px;
+			font-weight: 700;
+			text-decoration: none;
+			color: #38444b;
+		}
+		nav ul li a:before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: -100%;
+			width: 0%;
+			height: 3px;
+			background-color: #38444b;
+			transition: all ease 0.5s;
+		}
+		nav ul li a:hover:before{
+			width: 100%;
+			left: 0;
+		}
